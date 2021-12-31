@@ -8,3 +8,7 @@
 <button (click)="moreData()" class="btn">moreData</button>
 <button (click)="move0to2()" class="btn">move0to2</button>
 <div #dynamicComponent></div>
+
+<!-- library nhận vào component và hiển thị component đó bên trong library, cần build và link library trước khi start app -->
+<!-- cần nâng cấp: build service có methoe open để mở popup hiển thị component tương tự như dialog của material -->
+<lib-dialog-demo [input]="componentTransfer"></lib-dialog-demo>

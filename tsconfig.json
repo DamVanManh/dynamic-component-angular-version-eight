@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "dialog-demo": [
+        "dist/dialog-demo"
+      ],
+      "dialog-demo/*": [
+        "dist/dialog-demo/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

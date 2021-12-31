@@ -120,6 +120,41 @@
           }
         }
       }
+    },
+    "dialog-demo": {
+      "projectType": "library",
+      "root": "projects/dialog-demo",
+      "sourceRoot": "projects/dialog-demo/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/dialog-demo/tsconfig.lib.json",
+            "project": "projects/dialog-demo/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/dialog-demo/src/test.ts",
+            "tsConfig": "projects/dialog-demo/tsconfig.spec.json",
+            "karmaConfig": "projects/dialog-demo/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/dialog-demo/tsconfig.lib.json",
+              "projects/dialog-demo/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "dynamic-component-angular-version-eight"
 }

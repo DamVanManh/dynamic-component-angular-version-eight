@@ -8,6 +8,7 @@ import {
 } from "@angular/core";
 import { DynamicContentOneComponent } from "../dynamic-content-one/dynamic-content-one.component";
 import { DynamicContentTwoComponent } from "../dynamic-content-two/dynamic-content-two.component";
+import { ComponentTransferComponent } from "../component-transfer/component-transfer.component";
 
 @Component({
   selector: "app-example-container",
@@ -16,11 +17,10 @@ import { DynamicContentTwoComponent } from "../dynamic-content-two/dynamic-conte
 })
 export class ExampleContainerComponent implements OnInit {
   @ViewChild("dynamicComponent", { read: ViewContainerRef, static: true })
-  // containerRef: ViewContainerRef;
   containerRef: any;
   componentRefOne: ComponentRef<any>;
   componentRefTwo: ComponentRef<any>;
-  // componentFactory: any;
+  componentTransfer: any = ComponentTransferComponent;
   constructor(private cfr: ComponentFactoryResolver) {}
 
   ngOnInit() {}
